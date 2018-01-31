@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   #before_filter :get_blog
 
-  p "testing...."
+  p "testing....!"
 
 private
   def get_blog
