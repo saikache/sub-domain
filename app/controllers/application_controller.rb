@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  before_filter :get_blog
+  #before_filter :get_blog
 
 private
   def get_blog
