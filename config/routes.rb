@@ -3,11 +3,11 @@ Rails.application.routes.draw do
   get 'home/index'
 
 
-  resources :posts
-  resources :blogs
+  # resources :posts
+  # resources :blogs
 
-  match '/', to: 'blogs#index', constraints: { subdomain: 'www' }, via: [:get, :post, :put, :patch, :delete]
-  match '/', to: 'blogs#show', constraints: { subdomain: /.+/ }, via: [:get, :post, :put, :patch, :delete]
+  # match '/', to: 'blogs#index', constraints: { subdomain: 'www' }, via: [:get, :post, :put, :patch, :delete]
+  # match '/', to: 'blogs#show', constraints: { subdomain: /.+/ }, via: [:get, :post, :put, :patch, :delete]
 
   # root to: "blogs#index"
   root to: "home#index"
