@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
-  # get 'posts/show'
-
-  # get 'blogs/index'
-
-  # get 'blogs/show'
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  get 'home/index'
 
 
   resources :posts
@@ -12,7 +9,8 @@ Rails.application.routes.draw do
   match '/', to: 'blogs#index', constraints: { subdomain: 'www' }, via: [:get, :post, :put, :patch, :delete]
   match '/', to: 'blogs#show', constraints: { subdomain: /.+/ }, via: [:get, :post, :put, :patch, :delete]
 
-  root to: "blogs#index"
+  # root to: "blogs#index"
+  root to: "home#index"
 
 
 

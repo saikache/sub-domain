@@ -4,6 +4,6 @@ class BlogsController < ApplicationController
   end
 
   def show
-    @posts = @blog.posts
+    # @posts = @blog.posts
   end
 end

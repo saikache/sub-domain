@@ -1,0 +1,30 @@
+<%= form_tag(home_index_path, {:method => :get}) do %>
+  <%= text_field_tag :search %>
+  <%= submit_tag 'Search' %>
+<% end %>
+
+<br>
+
+<b>Category: </b><i><%= params['search']%></i>
+<hr>
+<%@books.each do |book|%>
+        
+<div class="row">
+  <div class="col-sm-12">
+    <div class="row">
+
+      <div class="col-md-5">
+        <div class="well">
+            <h4 class="text-info">
+                <span class="label label-success pull-right">By: <%= book.author%></span>
+                <%= book.title%>
+            </h4>
+        </div>
+      </div>
+
+    </div>  
+  </div>
+</div>
+
+    
+<%end%>
