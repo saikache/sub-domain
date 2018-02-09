@@ -5,7 +5,7 @@
 
 <br>
 
-<b>Category: </b><i><%= params['search']%></i>
+<b>Category: </b><i><%= params['search'] || 'All'%></i>
 <hr>
 <%@books.each do |book|%>
         
